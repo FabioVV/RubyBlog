@@ -4,4 +4,7 @@ class PagesController < ApplicationController
  #netmetalizer
   def about
   end
+
+  
+
 end
