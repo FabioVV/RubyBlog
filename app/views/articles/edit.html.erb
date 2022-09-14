@@ -1,4 +1,4 @@
-<h1 style="text-align:center">Create a new article</h1>
+<h1 style="text-align:center">Edit article</h1>
 
 <!-- 
 Possible errors based on our validadition at models/articles.rb
@@ -19,7 +19,7 @@ Possible errors based on our validadition at models/articles.rb
 
 
 
-<%= form_with scope: :article, data: { turbo: false }, url:articles_path, local:true do |f|%>
+<%= form_with(model: @article, local:true)  do |f|%>
     <p>
     <%= f.label :title%></br>
     <%= f.text_field :title%>
