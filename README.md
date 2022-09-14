@@ -1,7 +1,5 @@
 # README
 
-Blog app.
+CRUD de articles (Artigos.)
 
-In ruby.
-
-(New to this, just studying)
+Feito em ruby, usando ruby on rails.
