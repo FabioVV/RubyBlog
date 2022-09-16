@@ -1,9 +1,13 @@
-<h1 class="text-center text-5xl underline">Posts</h1>
-<h2><%= link_to 'Create new article', new_article_path%></h2>
+<h1 class="text-center text-6xl underline py-5">Posts</h1>
 
+<div class="container">
+    <h2></h2>
+    <button type="button" class="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 mr-2 mb-2">
+    <%= link_to 'Criar novo post', new_article_path, class:"botaopost"%></button>
+</div>
 
-<div class="min-h-screen bg-black py-5" >
-        <div class='overflow-x-auto w-full'>
+<div class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r" >
+        <div class='overflow-x-auto w-full py-6'>
             <table class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden '>
                 <thead class="bg-gray-900">
                     <tr class="text-white text-left">
@@ -40,6 +44,7 @@
                          </td>
                     </tr>
                     <%end%>
+                    
                 </tbody>
             </table>
         </div>

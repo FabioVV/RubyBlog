@@ -63,12 +63,7 @@
 .criarconta{
   
   color: #f0faff;
-  transition: 300ms ease-in-out;
-}
-
-.criarconta:hover{
-  text-decoration: underline;
-  
+  transition: 300ms ease-in-out; padding: 1rem;
   font-size: 3rem;
 }
 
@@ -89,4 +84,22 @@ div.centered table
 {
     margin: 0 auto; 
     text-align: left;
+}
+
+.botaopost{
+  
+}
+
+.container{
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-white{
+  transition: 200ms ease-in-out;
+}
+
+.text-white{
+  font-weight: bolder;
 }
