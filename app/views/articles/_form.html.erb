@@ -1,15 +1,19 @@
-<%= form_with(model: @article, local:true)  do |f|%>
-    <p>
-    <%= f.label :title%></br>
-    <%= f.text_field :title%>
-    </p>
 
-    <p>
-    <%= f.label :description%></br>
-    <%= f.text_area :description%>
-    </p>
+<div class="new-container"></div>
+<%= form_with(model: @article, local:true, class:"new-container" ) do |f|%>
+    <fieldset>
+        <legend class="legenda">Sua postagem vai ser: </legend>
 
-    <p>
-    <%= f.submit %>
-    </p>
+        <%= f.label :Titulo%>
+        <div>
+            <%= f.text_field :title%>
+        </div>
+
+        <%= f.label :Descrição%>
+        <div>
+            <%= f.text_area :description%>
+        </div>
+
+        <div><%= f.submit %></div>
+    </fieldset>
 <%end%>

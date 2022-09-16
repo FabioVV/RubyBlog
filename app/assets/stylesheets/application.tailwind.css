@@ -103,3 +103,22 @@ div.centered table
 .text-white{
   font-weight: bolder;
 }
+
+.new-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.legenda{
+
+}
+
+.new-title{
+
+}
+
+.retornar{
+  
+}
