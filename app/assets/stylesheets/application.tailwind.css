@@ -15,3 +15,64 @@
 
 
 
+#leninimage{
+  background-image: url(lenin.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg{
+  border-top: solid 3px black;
+}
+
+
+.createac{
+  border: solid 2px black;
+  transition: 300ms ease-in-out;
+  padding: 1rem;
+}
+
+.createac:hover{
+  border: black;
+  color: red;
+  padding: 2rem;
+}
+
+.logo{
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: overline;
+}
+
+.cor-meio{
+  background-color: #f7fdff;
+}
+
+.cor-h{
+  background-color: #23211f;
+}
+
+.bgpage{
+  background-color: #23211f;
+  color: #f0faff;
+}
+
+.criarconta{
+  
+  color: #f0faff;
+  transition: 300ms ease-in-out;
+}
+
+.criarconta:hover{
+  text-decoration: underline;
+  
+  font-size: 3rem;
+}
+
+#git{
+  text-decoration: underline;
+  color: #3f3731;
+  background-color: #e3f7ff;
+  padding: 6px;
+}
