@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 /*
 
@@ -75,4 +77,16 @@
   color: #3f3731;
   background-color: #e3f7ff;
   padding: 6px;
+}
+
+
+div.centered 
+{
+    text-align: center;
+}
+
+div.centered table 
+{
+    margin: 0 auto; 
+    text-align: left;
 }
