@@ -1,8 +1,9 @@
-<h1>Showing article details.</h1>
+<h1 class="new-title text-center text-6xl underline py-5">Detalhes da sua postagem</h1>
+
 
 <p><b>Title: <%= @article.title%></b></p>
 <p><b>Description: <%= @article.description%></b></p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?"} %> |
-<%= link_to 'Return to articles listing', articles_url %> 
+<%= link_to 'Editar', edit_article_path(@article) %> |
+<%= link_to 'Apagar', article_path(@article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?"} %> |
+<%= link_to 'Retornar para a listagem de postagens', articles_url %> 

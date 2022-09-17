@@ -1,9 +1,6 @@
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*
 
 @layer components {
@@ -13,9 +10,6 @@
 }
 
 */
-
-
-
 
 #leninimage{
   background-image: url(lenin.jpg);
@@ -86,10 +80,6 @@ div.centered table
     text-align: left;
 }
 
-.botaopost{
-  
-}
-
 .container{
   padding: 2rem;
   display: flex;
@@ -115,10 +105,79 @@ div.centered table
 
 }
 
+#new > *{
+  width: 50rem;
+}
+
+fieldset{
+  border:2px solid #000000;
+  padding: 3rem;
+  
+}
+
 .new-title{
 
 }
 
 .retornar{
   
+}
+
+.centeringform{
+  display: flex;
+  justify-content: center;
+}
+
+.labelnew{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+
+input[type=submit]{
+  margin-top: 2rem;
+  float: right;
+  font-size: 2rem;
+  transition: 250ms ease-in-out;
+  border: 1px solid black;
+}
+
+input[type=submit]:hover{
+  font-size: 2.5rem;
+  text-decoration: underline;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  
+  padding: 1re,;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
 }
