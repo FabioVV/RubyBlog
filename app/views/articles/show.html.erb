@@ -19,7 +19,7 @@
                         </td> <%@article.created_at%>
                         <td class="px-6 py-4">
                             <div>
-                                <p><%= @article.description%></p>
+                                <p style="text-justify:left;"><%= simple_format(@article.description)%></p>
                             </div>
                             <p class="text-gray-500 text-sm font-semibold tracking-wide"> Criado a <%= time_ago_in_words(@article.created_at)%>, 
                             Editado a <%= time_ago_in_words(@article.updated_at)%>
