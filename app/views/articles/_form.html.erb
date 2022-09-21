@@ -1,5 +1,5 @@
 <div class="new-container">
-<%= render 'shared/errors' %>
+<%= render 'shared/errors', obj:@article %>
 
 <%= form_with(model: @article, local:true, id:"new" ) do |f|%>
     <fieldset>
@@ -13,7 +13,7 @@
         
         <div class="labelnew"><%= f.label :Descrição%></div>
         <div class="centeringform">
-            <%= f.text_area :description%>
+            <%= f.text_area :description, rows: 10%>
         </div>
 
         <div ><%= f.submit :Postar%></div>
