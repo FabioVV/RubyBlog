@@ -1,0 +1,43 @@
+<div class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r" >
+  <div class='overflow-x-auto w-full py-6'>
+    <table class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden '>
+      <thead class="bg-gray-900">
+        <tr class="text-white text-left">
+          <th class="font-semibold text-sm uppercase px-6 py-4"> Titulo </th>
+          <th class="font-semibold text-sm uppercase px-6 py-4"> Descrição </th>
+          <th class="font-semibold text-sm uppercase px-6 py-4 text-center"> status </th>
+          <th class="font-semibold text-sm uppercase px-6 py-4 text-center"> Post por </th>
+          <th class="font-semibold text-sm uppercase px-6 py-4 text-center">Ações</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
+        <% obj.each do |article| %>
+          <tr>
+            <td class="px-6 py-4">
+              <div class="flex items-center space-x-3">
+                <div>
+                  <p> <%= article.title%> </p>
+                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> Placeholder </p>
+                </div>
+              </div>
+            </td>
+            <%article.created_at%>
+            <td class="px-6 py-4">
+              <p class=""> <%= truncate(article.description, length: 100)%> </p>
+              <p class="text-gray-500 text-sm font-semibold tracking-wide"> Criado a <%= time_ago_in_words(article.created_at)%>, 
+                Editado a <%= time_ago_in_words(article.updated_at)%>
+              </p>
+            </td>
+            <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full"> Active </span> </td>
+            <td class="px-6 py-4 text-center"> <%= link_to article.user.username, user_path(article.user) %> </td>
+            <td class="px-6 py-4 text-center">
+              <%= link_to 'Ver', article_path(article), class:"text-purple-800 hover:underline"%>
+              <%= link_to 'Editar', edit_article_path(article), class:"text-purple-800 hover:underline"%>
+              <%= link_to 'Apagar', article_path(article), data: {"turbo-method": :Apagar, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
+            </td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>

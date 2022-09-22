@@ -92,15 +92,44 @@ Para fazer com que o tailwind funcione (_É NECESSÁRIO PARA O PROJETO RODAR_) ,
 - ./bin/rails tailwindcss:install
 ```
 
-### _Rode o server com o comando "rails s" ou "rails server"_
+### _Rode o server com o comando:_
 
+```sh
+rails s 
+```
+ou
+
+```sh
+rails server 
+```
 ### _Para que tudo funcione, é necessário fazer a migração do banco de dados com o comando:_
 
 ```sh
 rails db:migrate
 ```
 
-## - É recomendo utilizar o "rails c" ou "rails console", para 'brincar' com o banco de dados (_SQLITE_) e gerar dados através do back-end.
+## - Utilização do console para criar posts e usuarios pelo back-end:
+
+```sh
+rails c
+```
+ou
+
+```sh
+rails console
+```
+
+Alguns comandos simples para realizar as operações descritas acima>>>>
+
+- User.new(:username="nome de usuario",:email="Email do usuario", :password="senha do usuario")
+- Article.new(:title="titulo do post",:description="seu post")
+
+```sh
+User.new(:username="nome de usuario",:email="Email do usuario", :password="senha do usuario")
+
+Article.new(:title="titulo do post",:description="seu post")
+```
+
 
 ## License
 

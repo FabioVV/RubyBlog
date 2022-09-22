@@ -21,10 +21,19 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         if @user.update(user_params)
             flash[:notice] = "Suas informções de perfil foram modificados com sucesso, caro(a) #{@user.username}!! "
-            redirect_to articles_path
+            redirect_to @user
         else
 
         end
+    end
+
+    def show
+        @user = User.find(params[:id])
+        #@articles = @user.articles
+    end
+
+    def index
+        @users = User.all
     end
 
     private
