@@ -30,7 +30,7 @@ Poucos tecnologias utilizadas até o momento:
 
 - [Ruby on rails] - (_Obviamente_)
 - [Tailwind] - Ótimo para criar CSS rapidamente.
-
+- [Ruby] - A linguagem de programação principal do projeto.
 
 ## Installation
 
