@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+    #paginates_per 1
     #before_save { self.email = email.downcase() }
     has_many :articles
 

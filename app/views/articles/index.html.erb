@@ -6,4 +6,6 @@
     <%= link_to 'Criar novo post', new_article_path, class:"botaopost"%></button>
 </div>
 
+
 <%= render 'article' , obj: @articles%>
+<%= paginate @articles %>

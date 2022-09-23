@@ -12,6 +12,7 @@
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
+        
         <% @users.each do |user| %>
           <tr>
             <td class="px-6 py-4">
@@ -40,3 +41,5 @@
     </table>
   </div>
 </div>
+
+<%= paginate @users %>

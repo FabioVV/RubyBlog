@@ -6,4 +6,6 @@
 
 <h3 class="new-title text-center text-6xl py-5">Seus posts</h3>
 
+
 <%= render 'articles/article', obj: @user.articles %>
+<%= paginate @articles%>
