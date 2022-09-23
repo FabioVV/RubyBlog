@@ -23,7 +23,6 @@ Feito por [Fábio Varela]
 > Lenin's blog
 
 
-
 ## Tech
 
 Poucos tecnologias utilizadas até o momento:

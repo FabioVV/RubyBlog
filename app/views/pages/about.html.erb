@@ -1,5 +1,49 @@
-<h1 style="text-align:center">About page.</h1>
+<header class="bg-white shadow">
+  <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 underline">Ruby on rails training.</h1>
+  </div>
+</header>
+<main>
+  <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <!-- Replace with your content -->
+    
+    <figure class="mx-auto max-w-screen-md text-center">
+        <svg aria-hidden="true" class="mx-auto mb-3 w-12 h-12 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+        <blockquote>
+            <p class="text-2xl italic font-medium text-gray-900 dark:text-black">"É fazendo que se aprende a fazer aquilo que se deve aprender a fazer."</p>
+        </blockquote>
+        <figcaption class="flex justify-center items-center mt-6 space-x-3">
+            
+            <%= image_tag "aristoteles.jpg" , class:"w-6 h-6 rounded-full"%>
+            <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                <cite class="pr-3 font-medium text-gray-900 dark:text-black">Aristóteles</cite>
+                <cite class="pl-3 text-sm font-light text-gray-500 dark:text-black">Filósofo</cite>
+            </div>
+        </figcaption>
+    </figure>
 
-
-<h2 style="text-align:center"><%= link_to 'Articles listing', articles_url %> </h2>
-<h3 style="text-align:center"><%= link_to 'Home page', root_path %> </h3>
+    <div class="px-4 py-6 sm:px-0">
+      
+        <h1 style="padding-top:3rem;" class="text-6xl text-black text-center underline">Projeto ruby, <span class="bg text-7xl">um pouco Sobre.</span></h1>
+        <p style="padding-top:2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero porro, reiciendis
+             eveniet ex rerum veritatis eum provident odit aliquid nam eaque. Eum aspernatur porro quod,
+              necessitatibus temporibus, sequi non ratione optio, repellendus delectus nesciunt fugit iusto? 
+              Cumque velit repellat, excepturi dicta dolorem, nulla obcaecati voluptatum exercitationem iure eaque 
+              cum minus aliquid quia sed tenetur commodi maxime odit deleniti dolores inventore? Nostrum nihil assumenda consequatur 
+            doloribus dicta quisquam exercitationem sunt cupiditate! Libero optio nisi unde.</p>
+    </div>
+    <!-- /End replace -->
+  </div>
+</main>
+<div class="bgpage py-12">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-lg font-semibold text-indigo-600">Sobre o blog</h2>
+      <br/>
+      <h3 style="text-align:center"><%= link_to 'Voltar a página principal', root_path %> </h3>
+      <br/>
+      <br/>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Blog do lenin. Um projeto pessoal para aprender ruby e desenvolvimento Web. Obrigado por vir aqui.</a>
+    </div>
+  </div>
+</div>
