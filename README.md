@@ -30,7 +30,8 @@ Poucos tecnologias utilizadas até o momento:
 
 - [Ruby on rails] - (_Obviamente_)
 - [Tailwind] - Ótimo para criar CSS rapidamente.
-- [Ruby] - A linguagem de programação principal do projeto.
+- [Kaminari] - Usado para criar paginação.
+- [bcrypt] - Usado para armezenar as senhas com segurança.
 
 ## Installation
 
@@ -105,7 +106,9 @@ rails server
 ### _Para que tudo funcione, é necessário fazer a migração do banco de dados com o comando:_
 
 ```sh
-rails db:migrate
+rails db:migrate -  ou melhor
+
+bin/rails db:migrate RAILS_ENV=development
 ```
 
 ## - Utilização do console para criar posts e usuarios pelo back-end:
