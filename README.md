@@ -1,4 +1,4 @@
-# Lenin blog
+# Lenin blog (Explicações abaixo foram feitas para o eu do futuro.)
 ## _Projeto de blog de postagens_
 
 É um simples blog, onde será possivel registrar usuários, e posts.
