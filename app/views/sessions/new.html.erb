@@ -1,0 +1,17 @@
+<h1 class="new-title text-center text-6xl underline py-5">Faça seu login!</h1>
+<div class="new-container">
+  <%= form_with(scope: :session, url: login_path , id:"new" ) do |f|%>
+    <fieldset>
+      <legend class="legenda">Seus dados: </legend>
+      <div class="labelnew"><%= f.label :Email%></div>
+      <div class="centeringform">
+        <%= f.email_field :email%>
+      </div>
+      <div class="labelnew"><%= f.label :Senha%></div>
+      <div class="centeringform">
+        <%= f.password_field :password%>
+      </div>
+      <div ><%= f.submit "Entrar" %></div>
+    </fieldset>
+  <%end%>
+</div>
