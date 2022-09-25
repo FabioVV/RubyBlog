@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :articles
   #post 'users', to: 'users#create'
   resources :users, except:[:new]
+  resources :categories, except: [:destroy]
 end

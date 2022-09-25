@@ -1,33 +1,52 @@
-<header>
-  <div class="min-h-full">
-    <nav class="cor-h text-white">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <%= link_to "LENIN", root_path,  class:"logo"%>
-            </div>
-            <div class="hidden md:block">
-              <div class="ml-10 flex space-x-4 ">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <%= link_to "Mostrar postagens", articles_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                <%if logged_in?%>
-                  <%= link_to "Criar postagem", new_article_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                <%end%>
-                <%= link_to "Lista de usuários", users_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-               
-                <% if logged_in? %>
-                  <%= "(admin)" if current_user.admin? %> <%= link_to current_user.username, user_path(current_user),  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                  <%= link_to 'Sair', logout_path, class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium", data: { "turbo-method": :delete } %>
-                  <%= link_to 'Apagar conta e dados', user_path(current_user), class:"reder lbg-black text-red px-3 py-2 rounded-md text-sm font-medium" , data: { "turbo-method": :delete , turbo_confirm: 'Você está certo do que deseja fazer?'}%>
-                <%else%>
-                  <%= link_to "Login", login_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                  <%= link_to "Criar uma conta", signup_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                <%end%>
-                 <%= link_to "Sobre", about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+<header >
+  <nav class="
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
+          py-4
+          md:py-0
+          px-4
+          text-lg text-gray-700
+          bg-white
+        ">
+    <div>
+      <%= link_to "LENIN", root_path,  class:"logo"%>
+    </div>
+    <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+      <ul class="
+              pt-4
+              text-base text-gray-700
+              md:flex
+              md:justify-between 
+              md:pt-0">
+        <li>
+          <%= link_to "Posts", articles_path,  class:"md:p-4 py-2 block hover:text-purple-400"%>
+        </li>
+        <li>
+          <%= link_to "Usuários", users_path,  class:"md:p-4 py-2 block hover:text-purple-400"%>
+        </li>
+        <li><%= link_to "Sobre", about_path, class: "md:p-4 py-2 block hover:text-purple-400" %></li>
+        <%if logged_in?%>
+          <li>
+            <%= link_to "Criar postagem", new_article_path,  class:"md:p-4 py-2 block hover:text-purple-400"%>
+          </li>
+        <%end%>
+        <% if logged_in? %>
+          <li>
+            <%= link_to current_user.username, user_path(current_user), class:"md:p-4 py-2 block hover:text-purple-400"%>
+          </li>
+          <li><%= "(Você é um admin.)" if current_user.admin? %></li>
+          <li><%= link_to 'Sair', logout_path, class:"md:p-4 py-2 block hover:text-purple-400", data: { "turbo-method": :delete } %></li>
+          <li><%= link_to 'Apagar conta e dados', user_path(current_user), class:"reder md:p-4 py-2 block hover:text-purple-400" ,
+             data: { "turbo-method": :delete , turbo_confirm: 'Você está certo do que deseja fazer?'}%>
+          </li>
+        <%else%>
+          <li><%= link_to "Login", login_path,  class:"md:p-4 py-2 block hover:text-purple-400 text-purple-500"%></li>
+          <li><%= link_to "Criar uma conta", signup_path,  class:"md:p-4 py-2 block hover:text-purple-400 text-purple-500"%></li>
+        <%end%>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
