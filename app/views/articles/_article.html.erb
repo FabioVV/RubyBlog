@@ -32,8 +32,12 @@
             <td class="px-6 py-4 text-center"> <%= link_to article.user.username, user_path(article.user) %> </td>
             <td class="px-6 py-4 text-center">
               <%= link_to 'Ver', article_path(article), class:"text-purple-800 hover:underline"%>
+
+              <% if logged_in? && (article.user == current_user || current_user.admin?) %>
               <%= link_to 'Editar', edit_article_path(article), class:"text-purple-800 hover:underline"%>
               <%= link_to 'Apagar', article_path(article), data: {"turbo-method": :Apagar, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
+              <%end%>
+              
             </td>
           </tr>
         <%end%>

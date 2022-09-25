@@ -67,7 +67,7 @@
   background-color: #23211f;
   color: #f0faff;
   padding-top: 2rem;
-  
+
 }
 
 .criarconta {
@@ -127,6 +127,10 @@ div.centered table {
 }
 
 .legenda {}
+
+#new{
+  
+}
 
 #new>* {
   width: 50rem;
@@ -202,6 +206,11 @@ input[type=submit]:hover {
   }
 }
 
+.reder{
+  color: red;
+  border: 1px red solid;
+  background: #000000;
+}
 
 
 /***********************************EFEITO E FORMATAÇÃO DA FOTO********************************************************/

@@ -2,9 +2,10 @@
 
 <%= gravatar_for @user%>
 
+<%if logged_in? && @user == current_user%>
 <h2 class="new-title text-center underline py-5"><%= link_to "Editar perfil", edit_user_path(@user) %></h1>
-
-<h3 class="new-title text-center text-6xl py-5">Seus posts</h3>
+<%end%>
+<h3 class="new-title text-center text-6xl py-5">Posts</h3>
 
 
 <%= render 'articles/article', obj: @user.articles %>

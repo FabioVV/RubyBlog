@@ -1,5 +1,4 @@
 <h1 class="new-title text-center text-6xl underline py-5">Usuários</h1>
-
 <div class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r" >
   <div class='overflow-x-auto w-full py-6'>
     <table class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden '>
@@ -12,7 +11,6 @@
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
-        
         <% @users.each do |user| %>
           <tr>
             <td class="px-6 py-4">
@@ -27,13 +25,20 @@
             <td class="px-6 py-4">
               <p> <%= pluralize(user.articles.count, "Posts") %> </p>
               <p class="text-gray-500 text-sm font-semibold tracking-wide"> Usuário criado a <%= time_ago_in_words(user.created_at)%>, 
-                usuário editado a <%= time_ago_in_words(user.updated_at)%> 
+                usuário editado a <%= time_ago_in_words(user.updated_at)%>
               </p>
             </td>
             <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full"> Active </span> </td>
             <td class="px-6 py-4 text-center">
               <%= link_to 'Ver perfil', user_path(user), class:"text-purple-800 hover:underline"%>
-              <%= link_to 'Editar perfil', edit_user_path(user), class:"text-purple-800 hover:underline"%>
+              <% if logged_in?%>
+                <%if user == current_user %>
+                  <%= link_to 'Editar perfil', edit_user_path(user), class:"text-purple-800 hover:underline"%>
+                <%end%>
+                <% if logged_in? and current_user.admin? and (current_user != user) %>
+                  <%= link_to 'Apagar este perfil(!!!!)', user_path(user), class:"reder hover:underline", data: { "turbo-method": :delete , turbo_confirm: 'Você está certo do que deseja fazer?'}%>
+                <%end%>
+              <%end%>
             </td>
           </tr>
         <%end%>
@@ -41,5 +46,4 @@
     </table>
   </div>
 </div>
-
 <%= paginate @users %>

@@ -1,3 +1,15 @@
 <% flash.each do |name,msg|%>
-    <%= msg %>
+  <%if name == 'notice'%>
+    <div class="bbg-emerald-400 border border-stone-500 text-black font-bold px-4 py-3 rounded relative text-center">
+      <ul>
+        <li><span class="block sm:inline text-center" style="padding-left:15px">* <%= msg %></span></li>
+      </ul>
+    </div>
+  <%else%>
+    <div class="bg-rose-600 border border-stone-500 text-black font-bold px-4 py-3 rounded relative text-center">
+      <ul>
+        <li><span class="block sm:inline text-center" style="padding-left:15px">* <%= msg %></span></li>
+      </ul>
+    </div>
+  <%end%>
 <% end %>

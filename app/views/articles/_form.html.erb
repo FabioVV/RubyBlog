@@ -1,22 +1,21 @@
-<div class="new-container">
-<%= render 'shared/errors', obj:@article %>
-
-<%= form_with(model: @article, local:true, id:"new" ) do |f|%>
-    <fieldset>
-        <legend class="legenda">Sua postagem: </legend>
-
-        <div class="labelnew"><%= f.label :Titulo%></div>
-        <div class="centeringform">
+<div class="min-h-screen" >
+  <div class='overflow-x-auto w-full py-6'>
+    <div class="new-container">
+      <%= render 'shared/errors', obj:@article %>
+      <%= form_with(model: @article, local:true, id:"new" ) do |f|%>
+        <fieldset>
+          <legend class="legenda">Sua postagem: </legend>
+          <div class="labelnew"><%= f.label :Titulo%></div>
+          <div class="centeringform">
             <%= f.text_field :title%>
-        </div>
-
-        
-        <div class="labelnew"><%= f.label :Descrição%></div>
-        <div class="centeringform">
+          </div>
+          <div class="labelnew"><%= f.label :Descrição%></div>
+          <div class="centeringform">
             <%= f.text_area :description, rows: 10, cols:100%>
-        </div>
-
-        <div ><%= f.submit :Postar%></div>
-    </fieldset>
-<%end%>
+          </div>
+          <div ><%= f.submit :Postar%></div>
+        </fieldset>
+      <%end%>
+    </div>
+  </div>
 </div>

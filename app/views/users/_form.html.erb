@@ -1,28 +1,25 @@
-<div class="new-container">
-
-<%= render 'shared/errors', obj:@user %>
-
-<%= form_with(model: @user, local:true, id:"new" ) do |f|%>
-    <fieldset>
-        <legend class="legenda">Seus dados: </legend>
-
-        <div class="labelnew"><%= f.label :Username%></div>
-        <div class="centeringform">
+<div class="min-h-screen" >
+  <div class='overflow-x-auto w-full py-6'>
+    <div class="new-container">
+      <%= render 'shared/errors', obj:@user %>
+      <%= form_with(model: @user, local:true, id:"new" ) do |f|%>
+        <fieldset>
+          <legend class="legenda">Seus dados: </legend>
+          <div class="labelnew"><%= f.label :Username%></div>
+          <div class="centeringform">
             <%= f.text_field :username%>
-        </div>
-
-        
-        <div class="labelnew"><%= f.label :Email%></div>
-        <div class="centeringform">
+          </div>
+          <div class="labelnew"><%= f.label :Email%></div>
+          <div class="centeringform">
             <%= f.email_field :email%>
-        </div>
-
-        <div class="labelnew"><%= f.label :Senha%></div>
-        <div class="centeringform">
+          </div>
+          <div class="labelnew"><%= f.label :Senha%></div>
+          <div class="centeringform">
             <%= f.password_field :password%>
-        </div>
-
-        <div ><%= f.submit(@user.new_record? ? "Criar!" : "Confirmar edições de perfil")%></div>
-    </fieldset>
-<%end%>
+          </div>
+          <div ><%= f.submit(@user.new_record? ? "Criar!" : "Confirmar edições de perfil")%></div>
+        </fieldset>
+      <%end%>
+    </div>
+  </div>
 </div>

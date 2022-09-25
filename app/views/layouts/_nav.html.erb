@@ -1,24 +1,33 @@
 <header>
-      <div class="min-h-full">
-        <nav class="cor-h text-white">
-          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-              <div class="flex items-center">
-                <div class="flex-shrink-0">
-                  <%= link_to "LENIN", root_path,  class:"logo"%>
-                </div>
-                <div class="hidden md:block">
-                  <div class="ml-10 flex items-baseline space-x-4 ">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <%= link_to "Entrar na sua conta", login_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                    <%= link_to "Sair da sua conta", logout_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium", data: {turbo_method: :delete}%>
-                    <%= link_to "Mostrar postagens", articles_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                    <%= link_to "Criar postagem", new_article_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                    <%= link_to "Lista de usuários", users_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
-                    <%= link_to "Sobre", about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
-                  </div>
-                </div>
+  <div class="min-h-full">
+    <nav class="cor-h text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <%= link_to "LENIN", root_path,  class:"logo"%>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex space-x-4 ">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <%= link_to "Mostrar postagens", articles_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+                <%if logged_in?%>
+                  <%= link_to "Criar postagem", new_article_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+                <%end%>
+                <%= link_to "Lista de usuários", users_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+               
+                <% if logged_in? %>
+                  <%= "(admin)" if current_user.admin? %> <%= link_to current_user.username, user_path(current_user),  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+                  <%= link_to 'Sair', logout_path, class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium", data: { "turbo-method": :delete } %>
+                  <%= link_to 'Apagar conta e dados', user_path(current_user), class:"reder lbg-black text-red px-3 py-2 rounded-md text-sm font-medium" , data: { "turbo-method": :delete , turbo_confirm: 'Você está certo do que deseja fazer?'}%>
+                <%else%>
+                  <%= link_to "Login", login_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+                  <%= link_to "Criar uma conta", signup_path,  class:"lbg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"%>
+                <%end%>
+                 <%= link_to "Sobre", about_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
               </div>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
