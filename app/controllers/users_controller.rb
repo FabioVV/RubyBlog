@@ -31,7 +31,7 @@ class UsersController < ApplicationController
           session[:user_id] = nil
           flash[:danger] = "Conta e todos os posts associados apagados."
         else
-          flash[:danger] = "You can't delete yourself!!"
+          flash[:danger] = "Você não pode se apagar!!!"
         end
         redirect_to users_path
       end
