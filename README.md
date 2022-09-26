@@ -34,22 +34,22 @@ Poucos tecnologias utilizadas até o momento:
 
 ## Installation
 
+## Para usar, instalar todas as dependecias e rodar o server.
+
 ### _DE PREFERENCIA UTILIZAR O EDITOR [VSCODE](https://code.visualstudio.com/) E SEU TERMINAL_
 
 Para rodar, necessita do tailwind e ruby on rails  (_duh_) [Ruby on Rails](https://rubyonrails.org/) ultima versão.
 
-#### _Instale as dependencias e rode o server para usar._
-
-
-Instalar o ruby on rails com o comando:
-
-```sh
-gem install rails
-```
 
 Instalar a linguagem [Ruby](https://www.ruby-lang.org/pt/)
 Instalar [RVM](https://rvm.io/) Ultima versão.
 
+
+Instalar o ruby on rails dentro do enviroment com o comando:
+
+```sh
+gem install rails
+```
 
 
 Quando instalar, precisamos configurar o RVM com o seguinte comando: 
