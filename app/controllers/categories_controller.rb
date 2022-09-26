@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
             flash[:notice] = "Categoria criada com sucesso!"
             redirect_to @category
         else
+            render 'new'
         end
     end
 

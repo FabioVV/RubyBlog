@@ -15,7 +15,7 @@
           <th class="font-semibold text-sm uppercase px-6 py-4"> Titulo </th>
           <th class="font-semibold text-sm uppercase px-6 py-4"> Descrição </th>
           <th class="font-semibold text-sm uppercase px-6 py-4 text-center"> status </th>
-          <th class="font-semibold text-sm uppercase px-6 py-4 text-center"> categoria por </th>
+          
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
@@ -25,19 +25,19 @@
               <div class="flex items-center space-x-3">
                 <div>
                   <p> <%= category.name%> </p>
-                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> Placeholder </p>
+                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> Titulo </p>
                 </div>
               </div>
             </td>
             <%category.created_at%>
             <td class="px-6 py-4">
-              <p class=""> Categoria de posts </p>
+              <p class=""> Categoria de posts criada por um admin. </p>
               <p class="text-gray-500 text-sm font-semibold tracking-wide"> Criado a <%= time_ago_in_words(category.created_at)%>, 
                 Editado a <%= time_ago_in_words(category.updated_at)%>
               </p>
             </td>
             <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full"> Active </span> </td>
-            <td class="px-6 py-4 text-center"> <%= link_to category.name, category_path(category) %> </td>
+            
           </tr>
           
         <%end%>
