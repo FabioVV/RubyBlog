@@ -1,21 +1,30 @@
-<div class="min-h-screen" >
-  <div class='overflow-x-auto w-full py-6'>
-    <div class="new-container">
-      <%= render 'shared/errors', obj:@article %>
-      <%= form_with(model: @article, local:true, id:"new" ) do |f|%>
-        <fieldset>
-          <legend class="legenda">Sua postagem: </legend>
-          <div class="labelnew"><%= f.label :Titulo%></div>
-          <div class="centeringform">
-            <%= f.text_field :title%>
-          </div>
-          <div class="labelnew"><%= f.label :Descrição%></div>
-          <div class="centeringform">
-            <%= f.text_area :description, rows: 10, cols:100%>
-          </div>
-          <div ><%= f.submit :Postar%></div>
-        </fieldset>
-      <%end%>
+<div class="max-w-screen-md mx-auto p-5">
+  <div class="text-center mb-16">
+    <p class="mt-4 text-sm leading-7 text-gray-500 font-regular uppercase">
+      Lenin
+    </p>
+    <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
+      Crie seu <span class="text-indigo-600">post</span>
+    </h3>
+  </div>
+  <%= render 'shared/errors', obj:@article %>
+  <%= form_with(model: @article, local:true, id:"new" ) do |f|%>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <%= f.label :Titulo, class:"block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"%>
+        <%= f.text_field :title, class:"appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"%>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3">
+        <%= f.label :Descrição, class:"block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"%>
+        <%= f.text_area :description, rows: 10, cols:100, class:"appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"%>
+      </div>
     </div>
   </div>
+  <div class="flex justify-center pb-8">
+    <%= f.submit :Postar! , class:"shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"%>
+  </div>
+</div>
+<%end%>
 </div>
