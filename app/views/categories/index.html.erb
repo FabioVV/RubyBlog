@@ -15,7 +15,7 @@
           <th class="font-semibold text-sm uppercase px-6 py-4"> Titulo </th>
           <th class="font-semibold text-sm uppercase px-6 py-4"> Descrição </th>
           <th class="font-semibold text-sm uppercase px-6 py-4 text-center"> status </th>
-          
+          <th class="font-semibold text-sm uppercase px-6 py-4 ">Ações</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-200">
@@ -25,7 +25,7 @@
               <div class="flex items-center space-x-3">
                 <div>
                   <p> <%= category.name%> </p>
-                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> Titulo </p>
+                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> <%= pluralize(category.articles.count, "Posts") %>  </p>
                 </div>
               </div>
             </td>
@@ -37,7 +37,7 @@
               </p>
             </td>
             <td class="px-6 py-4 text-center"> <span class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full"> Active </span> </td>
-            
+            <td class="text-center"><%= link_to 'Ver', category_path(category), class:"text-purple-800 hover:underline "%></td>
           </tr>
           
         <%end%>

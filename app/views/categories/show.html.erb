@@ -1,1 +1,10 @@
-<h1 style="text-align:center;"><%= @category.name %></h1>
+<h1 class="new-title text-center text-6xl underline py-5">Categoria: <%= @category.name %></h1>
+
+<%if logged_in? && current_user.admin?%>
+<h2 class="new-title text-center underline py-5"><%= link_to "Editar nome da categoria", edit_category_path(@category) %></h1>
+<%end%>
+<h3 class="new-title text-center text-4xl py-5">Posts que contém a tag dessa categoria</h3>
+
+
+<%= render 'articles/article'%>
+<%= paginate @articles%>
