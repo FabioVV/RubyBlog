@@ -44,7 +44,7 @@ class UsersController < ApplicationController
         #@user = User.find(params[:id])
         if @user.update(user_params)
             flash[:notice] = "Suas informações de perfil foram modificados com sucesso, caro(a) #{@user.username}!! "
-            redirect_to @userz
+            redirect_to @user
         else
 
         end
