@@ -22,6 +22,9 @@
                             <p class="text-gray-500 text-sm font-semibold tracking-wide"> Criado a <%= time_ago_in_words(@article.created_at)%>, 
                             Editado a <%= time_ago_in_words(@article.updated_at)%>
                             </p>
+                            <% if @article.categories.any? %>
+                                <p class="text-red-800 text-sm font-semibold tracking-wide"><%= render @article.categories %></p>
+                            <%end%>
                         </td>
                         
                         

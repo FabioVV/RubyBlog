@@ -17,7 +17,9 @@
               <div class="flex items-center space-x-3">
                 <div>
                   <p> <%= article.title%> </p>
-                  <p class="text-gray-500 text-sm font-semibold tracking-wide"> Placeholder </p>
+                  <% if article.categories.any? %>
+                    <p class="text-red-800 text-sm font-semibold tracking-wide"><%= render article.categories %></p>
+                  <%end%>
                 </div>
               </div>
             </td>
@@ -32,12 +34,10 @@
             <td class="px-6 py-4 text-center"> <%= link_to article.user.username, user_path(article.user) %> </td>
             <td class="px-6 py-4 text-center">
               <%= link_to 'Ver', article_path(article), class:"text-purple-800 hover:underline"%>
-
               <% if logged_in? && (article.user == current_user || current_user.admin?) %>
-              <%= link_to 'Editar', edit_article_path(article), class:"text-purple-800 hover:underline"%>
-              <%= link_to 'Apagar', article_path(article), data: {"turbo-method": :Apagar, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
+                <%= link_to 'Editar', edit_article_path(article), class:"text-purple-800 hover:underline"%>
+                <%= link_to 'Apagar', article_path(article), data: {"turbo-method": :Apagar, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
               <%end%>
-              
             </td>
           </tr>
         <%end%>
