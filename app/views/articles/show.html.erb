@@ -33,7 +33,7 @@
 
                             <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
                             <%= link_to 'Editar', edit_article_path(@article), class:"text-purple-800 hover:underline"%>
-                            <%= link_to 'Apagar', article_path(@article), data: {"turbo-method": :Apagar, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
+                            <%= link_to 'Apagar', article_path(@article), data: {"turbo-method": :delete, "turbo-confirm": "Are you sure?"},class:"text-purple-800 hover:underline"%>
                             <%end%>
                             
                          </td>

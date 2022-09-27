@@ -16,6 +16,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #leninimage {
@@ -277,3 +278,19 @@ input[type="submit"]:hover {
 }
 
 /*******************************************************************************************/
+
+
+
+@media only screen and (max-width: 500px) {
+
+  form{
+    
+  }
+  .appearance-none, label{
+           
+            width: 80%;
+            border: none;
+            padding: 10px 25px;
+    
+  }
+}
