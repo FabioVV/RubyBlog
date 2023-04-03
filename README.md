@@ -28,7 +28,7 @@ Feito por [Fábio Varela]
 Poucos tecnologias utilizadas até o momento:
 
 - [Ruby on rails] - 
-- [Tailwind] - Ótimo para criar CSS rapidamente.
+- [Tailwind] - 
 - [Kaminari] - Usado para criar paginação.
 - [bcrypt] - Usado para armezenar as senhas com segurança.
 
