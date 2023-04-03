@@ -1,4 +1,4 @@
-# Lenin blog (Explicações abaixo foram feitas para o eu do futuro.)
+# Blog em ruby (Explicações abaixo foram feitas para o eu do futuro.)
 ## _Projeto de blog de postagens_
 
 É um simples blog, onde será possivel registrar usuários, e posts.
@@ -27,7 +27,7 @@ Feito por [Fábio Varela]
 
 Poucos tecnologias utilizadas até o momento:
 
-- [Ruby on rails] - (_Obviamente_)
+- [Ruby on rails] - 
 - [Tailwind] - Ótimo para criar CSS rapidamente.
 - [Kaminari] - Usado para criar paginação.
 - [bcrypt] - Usado para armezenar as senhas com segurança.
