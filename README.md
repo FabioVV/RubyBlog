@@ -3,9 +3,11 @@
 
 É um simples blog, onde será possivel registrar usuários, e posts.
 
-- CRUD completo.
-- 99% Ruby on rails;
-- ✨1% Tailwind✨
+```sh
+puts "Crud completo"
+puts "Ruby on rails"
+puts "Tailwind"
+```
 
 
 Feito por [Fábio Varela] 
@@ -14,21 +16,20 @@ Feito por [Fábio Varela]
 ## Features
 
 - Registrar usuário (Admin)
-- Registro de novo usuário do blog.
+- Registro novo usuário do blog.
 - Visualizar, criar, editar e apagar usuários.
 - Visualizar, criar, editar e apagar posts.
+- Visualizar, criar, editar e apagar categorias de posts.
 
-
-
-> Lenin's blog
+> Blog
 
 
 ## Tech
 
-Poucos tecnologias utilizadas até o momento:
+ Tecnologias utilizadas:
 
-- [Ruby on rails] - 
-- [Tailwind] - 
+- [Ruby on rails] - Framework da linguagem Ruby para criar sites, sistemas web e etc
+- [Tailwind] - Framework CSS para melhor produtividade e estilização da página
 - [Kaminari] - Usado para criar paginação.
 - [bcrypt] - Usado para armezenar as senhas com segurança.
 
@@ -36,10 +37,7 @@ Poucos tecnologias utilizadas até o momento:
 
 ## Para usar, instalar todas as dependecias e rodar o server.
 
-### _DE PREFERENCIA UTILIZAR O EDITOR [VSCODE](https://code.visualstudio.com/) E SEU TERMINAL_
-
-Para rodar, necessita do tailwind e ruby on rails  (_duh_) [Ruby on Rails](https://rubyonrails.org/) ultima versão.
-
+Para rodar, necessita do tailwind e ruby on rails [Ruby on Rails](https://rubyonrails.org/) ultima versão.
 
 Instalar a linguagem [Ruby](https://www.ruby-lang.org/pt/)
 Instalar [RVM](https://rvm.io/) Ultima versão.
@@ -51,16 +49,13 @@ Instalar o ruby on rails dentro do enviroment com o comando:
 gem install rails
 ```
 
-
 Quando instalar, precisamos configurar o RVM com o seguinte comando: 
 
 ```sh
 source ~/.rvm/scripts/rvm 
 ```
 
-
-E instalar a versão [Ruby] utilizado nesse projeto com o comando com o comando: 
-
+E instalar a versão [Ruby] utilizado nesse projeto: 
 
 ```sh
 rvm install 3.1.0
@@ -68,27 +63,23 @@ rvm install 3.1.0
 
 E utilizar está mesma versão no seu enviroment: 
 
-
 ```sh
 rvm use --default 3.1.0
 ```
-
-
-Após tudo isso, fazer o download do projeto com [git clone] ou baixar o [zip](https://github.com/FabioVV/lenin-blog/archive/refs/heads/main.zip)
 
 Dentro da pasta do projeto, rodar o seguinte comando no terminal: 
 
 ```sh
 bundle install --without production
 ```
+
 Irá instalar todas as demais dependencias do projeto.
 
 
 Para fazer com que o tailwind funcione (_É NECESSÁRIO PARA O PROJETO RODAR_) , digitar os seguintes comandos no terminal: 
 
 ```sh
-- ./bin/bundle add tailwindcss-rails --- Caso esse comando resulte em algum tipo de erro, ignorar e executar o próximo.
-
+- ./bin/bundle add tailwindcss-rails    --------   Caso esse comando resulte em algum tipo de erro, ignorar e executar o próximo.
 - ./bin/rails tailwindcss:install
 ```
 
@@ -102,12 +93,11 @@ ou
 ```sh
 rails server 
 ```
+
 ### _Para que tudo funcione, é necessário fazer a migração do banco de dados com o comando:_
 
 ```sh
-rails db:migrate -  ou melhor
-
-bin/rails db:migrate RAILS_ENV=development
+rails db:migrate 
 ```
 
 ## - Utilização do console para criar posts e usuarios pelo back-end:
@@ -122,9 +112,6 @@ rails console
 ```
 
 Alguns comandos simples para realizar as operações descritas acima>>>>
-
-- User.new(:username="nome de usuario",:email="Email do usuario", :password="senha do usuario")
-- Article.new(:title="titulo do post",:description="seu post")
 
 ```sh
 User.new(:username="nome de usuario",:email="Email do usuario", :password="senha do usuario")
